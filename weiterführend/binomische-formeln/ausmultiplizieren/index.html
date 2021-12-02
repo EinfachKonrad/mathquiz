@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Plus und Minus im Zahlenraum bis 20</title>
+	<link rel="icon" href="https://yt3.ggpht.com/ytc/AKedOLTjpED_qfV0F54aiSJBQqPme10VaDe61dZrvQOo=s176-c-k-c0x00ffffff-no-rj-mo" type="image/x-icon">
+    </head>
+    <body>
+<style>
+body {
+  font-size: 20pt;
+  font-family: Trebuchet MS;
+  text-align: center;
+  color: white;
+  background: #2c2f33;
+}
+
+empty {
+font-size: 5pt>
+}
+
+.button {
+border-radius: 11px;
+background-color: #7289da;
+border: none;
+font-size: 20pt;
+}
+</style>
+<a href="/quiz/"><button class="button" style="display: block;text-alaign= left; font-size: 50%;">Zurück!</button></a>
+<div id="one" style="display: inline;">( </div>
+<div id="math_1" style="display: inline;"></div>
+<div id="two" style="display: inline;"></div>
+<div id="three" style="display: inline;">)( </div>
+<div id="math_2" style="display: inline;"></div>
+<div id="four" style="display: inline;"></div>
+<div style="display: inline;">)</div>
+
+<script>
+/*		(a+b)*(a+b)=a^2+ab+b^2
+		(a-b)*(a-b)=a^2+ab^b^2
+		(a+/-b)*(a+/-b)=a^2-b^2		*/
+
+//	1. Formel
+
+var arr = ["-", "+"];
+var js_one = Math.floor(Math.random() * 10) + 1;
+var js_two = Math.floor(Math.random() * 10) + 1;
+var js_math_1 = arr[Math.floor(Math.random() * arr.length)];
+var js_math_2 = arr[Math.floor(Math.random() * arr.length)];
+
+document.getElementById("one").innerHTML += js_one;
+document.getElementById("two").innerHTML += js_two;
+document.getElementById("three").innerHTML += js_one;
+document.getElementById("four").innerHTML += js_two;
+document.getElementById("math_1").innerHTML = js_math_1;
+document.getElementById("math_2").innerHTML = js_math_2;
+</script>
+
+<h5>&nbsp;</h5>
+<form>
+  <div>
+    <label for="user_result">Was ist das Ergebnis? &nbsp; &nbsp; &nbsp;</label>
+    <input id="user_result" type="number" name="user_result" min="0" max="100" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input class="button" onclick="resultClick()" type="submit">
+  </div>
+</form>
+
+
+    </body>
+</html>

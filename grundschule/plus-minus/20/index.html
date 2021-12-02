@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Plus und Minus im Zahlenraum bis 20</title>
+	<link rel="icon" href="https://yt3.ggpht.com/ytc/AKedOLTjpED_qfV0F54aiSJBQqPme10VaDe61dZrvQOo=s176-c-k-c0x00ffffff-no-rj-mo" type="image/x-icon">
+    </head>
+    <body>
+<style>
+body {
+  font-size: 20pt;
+  font-family: Trebuchet MS;
+  text-align: center;
+  color: white;
+  background: #2c2f33;
+}
+
+empty {
+font-size: 5pt>
+}
+
+.button {
+border-radius: 11px;
+background-color: #7289da;
+border: none;
+font-size: 20pt;
+}
+</style>
+<a href="/quiz/"><button class="button" style="display: block;text-alaign= left; font-size: 50%;">Zurück!</button></a>
+<div id="one" style="display: inline;"></div>
+<div id="math" style="display: inline;"></div>
+<div id="two" style="display: inline;"></div>
+
+<script>
+var arr = ["-", "+"];
+var neg = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var js_one = Math.floor(Math.random() * 20) + 1;
+var js_two = Math.floor(Math.random() * 20) + 1;
+var js_math = arr[Math.floor(Math.random() * arr.length)];
+
+
+if (js_math == "+") {
+   var total = js_one + js_two;
+  } else {
+  var total = js_one - js_two;
+  }
+  
+if (total < 0) {
+	var js_one = neg[Math.floor(Math.random() * neg.length)];
+	var js_two = neg[Math.floor(Math.random() * neg.length)];
+	var js_math = "+"
+	
+	var total = js_one + js_two;
+}
+  
+document.getElementById("one").innerHTML += js_one;
+document.getElementById("two").innerHTML += js_two;
+document.getElementById("math").innerHTML = js_math;
+
+
+function resultClick() {
+var user = document.getElementById('user_result').value;
+
+if (user != total) {
+alert("Falsch!");
+} else {
+alert("Richtig");
+}
+}
+</script>
+
+<h5>&nbsp;</h5>
+<form>
+  <div>
+    <label for="user_result">Was ist das Ergebnis? &nbsp; &nbsp; &nbsp;</label>
+    <input id="user_result" type="number" name="user_result" min="0" max="100" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input class="button" onclick="resultClick()" type="submit">
+  </div>
+</form>
+
+
+    </body>
+</html>
