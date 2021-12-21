@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<title>Mathequiz by EinfachKonrad</title>
+	<title>Mathquiz by EinfachKonrad</title>
 	<link rel="icon" href="https://yt3.ggpht.com/ytc/AKedOLTjpED_qfV0F54aiSJBQqPme10VaDe61dZrvQOo=s176-c-k-c0x00ffffff-no-rj-mo" type="image/x-icon">
     </head>
     <body>
@@ -31,8 +31,8 @@ font-size: 20pt;
   color: white;
   padding: 16px;
   font-size: 16px;
-  min-width: 141px;
-  max-width: 141px;
+  min-width: 150px;
+  max-width: 150px;
   border: none;
 }
 
@@ -47,8 +47,8 @@ font-size: 20pt;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 141px;
-  max-width: 141px;
+  min-width: 150px;
+  max-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -70,32 +70,65 @@ font-size: 20pt;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.a:link {
+  color: #e7e7e7;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.a:visited {
+  color: #E7E7E7;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.a:hover {
+  color: #acacac;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+error {
+	 font: bold 18px/1  "Genericons-Neue";
+     content: "\f418";
+     vertical-align: top;
+     color: #F90B6D;
+     padding-right: 7px;
+}
 </style>
 
-<h3>Rechenquiz by EinfachKonrad</h3>
+<h3>Mathquiz by EinfachKonrad</h3>
 <div class="dropdown">
-    <button class="dropbtn">Grundschule</button>
+<button class="dropbtn">Grundschule</button>
     <div class="dropdown-content">
 	<button class="dropbtn">Plus und Minus</button>
-    <div class="dropdown-content">
-      <a href="grundschule/plus-minus/20/">Bis 20</a>
-      <a href="grundschule/plus-minus/50/">Bis 50</a>
-      <a href="grundschule/plus-minus/100/">Bis 100 (soon!)</a>
+			<a href="grundschule/plus-minus/20/">Bis 20</a>
+			<a href="grundschule/plus-minus/50/">Bis 50</a>
+			<a href="grundschule/plus-minus/100/">Bis 100</a>
+	  	<button class="dropbtn">Zahlenrätsel (soon!)</button>
+			<a href="grundschule/zahlenrätsel/50">Plus und Minus bis 50</a>
     </div>
-    </div>
-  </div>
+</div>
 
 <div class="dropdown">
-    <button class="dropbtn">Gymnasium</button>
-    <div class="dropdown-content">
+  <button class="dropbtn">Weiterführend</button>
+  <div class="dropdown-content">
 		<button class="dropbtn">Plus und Minus</button>
-      <a href="weiterführend/plus-minus/">bis 1000</a>
-	<button class="dropbtn">binomische Formeln (soon!)</button>
-      <a href="weiterführend/binomische-formeln/ausmultiplizieren/">ausmulti-<br>plizieren</a>
-	  <a href="weiterführend/binomische-formeln/faktorisieren/">faktorisieren</a>
-    </div>
+			<a href="weiterführend/plus-minus/">bis 1000</a>
+		<button class="dropbtn">Zahlenrätsel (soon!)</button>
+			<a href="weiterführend/zahlenrätsel/">Plus, Minus, Mal und Durch mit Kommazahlen</a>
+		<button class="dropbtn">binomische Formeln (soon!)</button><
+			<a href="weiterführend/binomische-formeln/ausmultiplizieren/">ausmulti-<br>plizieren</a>
+			<a href="weiterführend/binomische-formeln/faktorisieren/">faktorisieren</a>
   </div>
+</div>
 <h3>&nbsp;</h3>
-<p style="font-size: 10pt;">Version 0.9-BETA | Developed by EinfachKonrad | This is an Open-Source-Project! <a href="https://github.com/EinfachKonrad/mathquiz">View here!</a></p>
+<p style="font-size: 10pt; display: inline;">Version 0.9.1-BETA | Developed by EinfachKonrad | This is an Open-Source-Project! <a class="a" href="https://github.com/EinfachKonrad/mathquiz">View here!</a></p>
     </body>
 </html>
