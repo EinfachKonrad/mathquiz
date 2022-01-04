@@ -25,7 +25,7 @@ border: none;
 font-size: 20pt;
 }
 </style>
-<a href="/quiz/"><button class="button" style="display: block;text-alaign= left; font-size: 50%;">Zur�ck!</button></a>
+<a href="/quiz/"><button class="button" style="display: block;text-alaign= left; font-size: 50%;">Zur&uuml;ck!</button></a>
 <div id="one" style="display: inline;"></div>
 <div id="math" style="display: inline;"></div>
 <div id="two" style="display: inline;"></div>
@@ -44,12 +44,8 @@ if (js_math == "+") {
   var total = js_one - js_two;
   }
   
-if (total < 0) {
-	var js_one = neg[Math.floor(Math.random() * neg.length)];
-	var js_two = neg[Math.floor(Math.random() * neg.length)];
-	var js_math = "+"
-	
-	var total = js_one + js_two;
+if (total < 0) {	
+	var total = js_two + js_one;
 }
   
 document.getElementById("one").innerHTML += js_one;
